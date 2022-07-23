@@ -1,5 +1,3 @@
-# 자주 헷갈리는 내용 정리
-
 # 문자열 리스트를 정수로 변환
 
 ### 새로운 리스트 = list(map(int, 리스트이름))
@@ -47,4 +45,38 @@ for i in range(4):
         print('에러와 상관없이 수행')
 ```
 
+--- 
+# sys.stdin.readline() 사용법
+### 한 개의 정수 입력
 
+```python
+import sys
+a = int(sys.stdin.readline())
+```
+
+### 정해진 개수의 정수를 한줄에 입력받을 때
+```python
+import sys
+a,b,c = map(int,sys.stdin.readline().split())
+```
+###  임의의 개수의 정수를 한줄에 입력받아 리스트에 저장할 때
+```python
+import sys
+data = list(map(int,sys.stdin.readline().split()))
+```
+
+### 임의의 개수의 정수를 n줄 입력받아 2차원 리스트에 저장할 때
+```python
+import sys
+data = []
+n = int(sys.stdin.readline())
+for i in range(n):
+    data.append(list(map(int,sys.stdin.readline().split())))
+```
+
+### 문자열 n줄을 입력받아 리스트에 저장할 때
+```python
+import sys
+n = int(sys.stdin.readline())
+data = [sys.stdin.readline().strip() for i in range(n)]
+```
